@@ -12,7 +12,7 @@ const FileUpload = () => {
 
   const fetchUploadedFiles = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/upload', {
+      const response = await axios.get('https://react-tube-s3.vercel.app/api/upload', {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setUploadedFiles(response.data);
@@ -35,7 +35,7 @@ const FileUpload = () => {
     formData.append('file', file);
 
     try {
-      await axios.post('http://localhost:5000/api/upload', formData, {
+      await axios.post('https://react-tube-s3.vercel.app/api/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${localStorage.getItem('token')}`,
