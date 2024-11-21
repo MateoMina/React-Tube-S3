@@ -29,4 +29,14 @@ router.get('/', auth, async (req, res) => {
   }
 });
 
+// Endpoint para obtener todos los archivos
+router.get('/all', async (req, res) => {
+  try {
+    const files = await File.find();
+    res.json(files);
+  } catch (error) {
+    res.status(500).json({ message: 'Error al obtener archivos' });
+  }
+});
+
 module.exports = router;
