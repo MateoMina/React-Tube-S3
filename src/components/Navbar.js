@@ -16,7 +16,7 @@ const Navbar = () => {
     <nav className="bg-gray-800 p-4">
       <ul className="flex space-x-4">
         <li><Link to="/" className="text-white hover:text-gray-300">Inicio</Link></li>
-        <li><Link to="/all" className="text-white hover:text-gray-300">ReacTube</Link></li>
+        <li><Link to="/upload/all" className="text-white hover:text-gray-300">ReacTube</Link></li>
         <li><Link to="/upload" className="text-white hover:text-gray-300">Subir Archivo</Link></li>
         {!localStorage.getItem('token') ? (
           <>

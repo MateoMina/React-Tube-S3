@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import FileUpload from './pages/FileUpload';
+import FileExplorer from './pages/FileExplorer';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/upload/all" element={<FileExplorer />} />
           <Route path="/upload" element={<PrivateRoute><FileUpload /></PrivateRoute>} />
         </Routes>
       </div>
